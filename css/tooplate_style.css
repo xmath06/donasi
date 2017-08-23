@@ -189,19 +189,19 @@ h6 { font-size: 14px; margin: 0 0 5px; padding: 0; }
 }
 
 #tooplate_wrapper {
-	width: 980px;
+	width: 90%;
 	margin: 0 auto;
 	padding: 0 5px;
 }
 
 #tooplate_header {
-	width: 980px;
+	width: 90%;
 	height: 65px;
 	background: url(../images/tooplate_header.png) no-repeat top center;
 }
 
 #tooplate_header_sp {
-	width: 980px;
+	width: auto;
 	height: 174px;
 	margin-bottom: 40px;
 	background: url(../images/tooplate_header.png) no-repeat top center;
@@ -297,14 +297,23 @@ h6 { font-size: 14px; margin: 0 0 5px; padding: 0; }
 
 #tooplate_main {
 	clear: both;
-	width: 980px;
+	width: auto;
+}
+.page-header {
+    padding-bottom: 9px;
+    margin: 40px 0 20px;
+    border-bottom: 1px solid #ffffff;
+    background-color: #ffa700;
 }
 
 /* sidebar */
 
 #tooplate_sidebar {
-	float: left;
-	width: 280px;
+	float: right;
+	width: 20%;
+}
+.sidebar_header{
+	background-color: #ffa700;
 }
 
 .sidebar_box {
@@ -350,8 +359,8 @@ h6 { font-size: 14px; margin: 0 0 5px; padding: 0; }
 /* content */
 
 #tooplate_content {
-	float: right;
-	width: 640px;
+	float: left;
+	width: 75%;
 }
 
 .col_fw { 

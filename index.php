@@ -1,3 +1,12 @@
+<?php
+
+if(!$_GET['q']){
+	$url="index2.php";
+}else{
+	$url=$_GET['q'].".php";
+}
+;
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -13,7 +22,7 @@ http://www.tooplate.com/view/2051-spot-light
 	<link rel="stylesheet" type="text/css" href="assests/bootstrap/css/bootstrap.min.css">
 	<!-- datatables css -->
 	<link rel="stylesheet" type="text/css" href="assests/datatables/datatables.min.css">
-	
+	<link rel="stylesheet" type="text/css" href="custom/css/style.css">
 	<link href="css/tooplate_style.css" rel="stylesheet" type="text/css" />
 
     <link rel="stylesheet" href="css/galleriffic-2.css" type="text/css" />
@@ -33,8 +42,8 @@ http://www.tooplate.com/view/2051-spot-light
     <div id="tooplate_header">
         <div id="tooplate_menu">
             <ul>
-                <li><a href="index.html" class="current"><span></span>Home</a></li>
-                <li><a href="about.html"><span></span>About Us</a></li>
+                <li><a <?php if($url=="index2.php"){echo "href='' class='current'";}else{echo "href='?q=index2'";};; ?>><span></span>Donasi</a></li>
+                <li><a <?php if($url=="admin/table.php"){echo "href='' class='current'";}else{echo "href='?q=admin/table'";}; ?><span></span>About Us</a></li>
                 <li><a href="gallery.html"><span></span>Gallery</a></li>
                 <li><a href="blog.html"><span></span>Blog</a></li>
                 <li><a href="contact.html"><span></span>Contact</a></li>
@@ -42,12 +51,25 @@ http://www.tooplate.com/view/2051-spot-light
         </div> <!-- end of tooplate_menu -->  
 
     </div> <!-- end of header -->
-    
+	
+	<div id="header" class="header">
+		<center><h1 class="page-header">Infaq Listrik <small>Masjid dan Mushola</small> </h1> </center>
+	</div>
+	
     <div id="tooplate_main">
-    	
-    	<div id="tooplate_sidebar">
+    	     
+        <div id="tooplate_content">
+       	  <div class="col_fw">
+			  <?php include $url; ?>
+
+			</div>
+        </div> <!-- end of content -->
+
+		<div id="tooplate_sidebar">
         	<div class="sidebar_box" id="aprove">
-                <h2>Infaq yang diaprove</h2>
+				<div class="sidebar_header">	
+					<h2>Infaq yang diaprove</h2>
+				</div>
                 <div class="news_box">
                     <h3 class="aprovenohp">Donec eu orci dolor</h3>
                     <p class="aprovenama">Integer eros augue, auctor vel scelerisque at, pellentesque sit amet odio. </p>
@@ -55,13 +77,6 @@ http://www.tooplate.com/view/2051-spot-light
                 
 			</div>            
         </div> <!-- end of sidebar -->
-        
-        <div id="tooplate_content">
-       	  <div class="col_fw">
-			  <?php include "table.php"; ?>
-
-			</div>
-        </div> <!-- end of content -->
         
         <div class="cleaner"></div>
     </div> <!-- end of main -->

@@ -24,38 +24,42 @@ $(document).ready(function() {
 			var form = $(this);
 
 			// validation
-			var name = $("#name").val();
-			var address = $("#address").val();
-			var contact = $("#contact").val();
+			var nama = $("#nama").val();
+			var alamat = $("#alamat").val();
+			var rekening = $("#rekening").val();
+			var type = $("#type").val();
+			var lat = $("#lat").val();
+			var long = $("#long").val();
+			var gambar = $("#gambar").val();
 			
 
-			if(name == "") {
-				$("#name").closest('.form-group').addClass('has-error');
-				$("#name").after('<p class="text-danger">The Name field is required</p>');
+			if(nama == "") {
+				$("#nama").closest('.form-group').addClass('has-error');
+				$("#nama").after('<p class="text-danger">The Name field is required</p>');
 			} else {
-				$("#name").closest('.form-group').removeClass('has-error');
-				$("#name").closest('.form-group').addClass('has-success');				
+				$("#nama").closest('.form-group').removeClass('has-error');
+				$("#nama").closest('.form-group').addClass('has-success');				
 			}
 
-			if(address == "") {
-				$("#address").closest('.form-group').addClass('has-error');
-				$("#address").after('<p class="text-danger">The Address field is required</p>');
+			if(alamat == "") {
+				$("#alamat").closest('.form-group').addClass('has-error');
+				$("#alamat").after('<p class="text-danger">The alamat field is required</p>');
 			} else {
-				$("#address").closest('.form-group').removeClass('has-error');
-				$("#address").closest('.form-group').addClass('has-success');				
+				$("#alamat").closest('.form-group').removeClass('has-error');
+				$("#alamat").closest('.form-group').addClass('has-success');				
 			}
 
-			if(contact == "") {
-				$("#contact").closest('.form-group').addClass('has-error');
-				$("#contact").after('<p class="text-danger">The Contact field is required</p>');
+			if(rekening == "") {
+				$("#rekening").closest('.form-group').addClass('has-error');
+				$("#rekening").after('<p class="text-danger">The rekening field is required</p>');
 			} else {
-				$("#contact").closest('.form-group').removeClass('has-error');
-				$("#contact").closest('.form-group').addClass('has-success');				
+				$("#rekening").closest('.form-group').removeClass('has-error');
+				$("#rekening").closest('.form-group').addClass('has-success');				
 			}
 
 			
 
-			if(name && address && contact) {
+			if(nama && alamat && rekening) {
 				//submi the form to server
 				$.ajax({
 					url : form.attr('action'),
